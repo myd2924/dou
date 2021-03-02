@@ -1,0 +1,23 @@
+java8 十大特性之访问接口的默认方法
+
+常用接口：
+Predicate接口 接口只有一个参数，返回boolean类型
+Function 接口 接口有一个参数并且返回一个结果，并附带了一些可以和其他函数组合的默认方法
+Supplier 接口 接口返回一个任意范型的值，和Function接口不同的是该接口没有任何参数
+
+Consumer 接口 接口表示执行在单个参数上的操作。
+Comparator 接口 Java 8在此之上添加了多种默认方法
+
+Optional 接口 不是函数是接口，这是个用来防止NullPointerException异常的辅助类型，这是下一届中将要用到的重要概念
+
+Stream 接口 Filter 过滤 过滤通过一个predicate接口来过滤并只保留符合条件的元素，该操作属于中间操作
+Sort 排序 排序是一个中间操作，返回的是排序好后的Stream
+forEach是一个最终操作 之后来执行其他Stream操作
+Map 映射 中间操作map会将元素根据指定的Function接口来依次将元素转成另外的对象
+
+Match 匹配 Stream提供了多种匹配操作，允许检测指定的Predicate是否匹配整个Stream。所有的匹配操作都是最终操作，并返回一个boolean类型的值。
+Count 计数 计数是一个最终操作，返回Stream中元素的个数，返回值类型是long。
+
+Reduce 规约 这是一个最终操作，允许通过指定的函数来讲stream中的多个元素规约为一个元素，规越后的结果是通过Optional接口表示
+
+并行Streams 前面提到过Stream有串行和并行两种，串行Stream上的操作是在一个线程中依次完成，而并行Stream则是在多个线程上同时执行。
