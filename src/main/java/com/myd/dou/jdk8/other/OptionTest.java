@@ -22,6 +22,7 @@ public class OptionTest {
 
         Optional<User> op = Optional.empty();
 
+        System.out.println(Optional.ofNullable(null).toString());
 
 
     }
