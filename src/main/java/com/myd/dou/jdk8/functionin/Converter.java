@@ -7,8 +7,8 @@ package com.myd.dou.jdk8.functionin;
  * @Created by mayd
  */
 @FunctionalInterface
-public interface Converter<F,T> {
-    T conver (F from);
+public interface Converter<T,R> {
+    R conver (T from);
 
     default double sqrt(int a){
         return Math.sqrt(a);
