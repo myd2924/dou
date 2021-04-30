@@ -18,8 +18,8 @@ public class TestMain {
         list.add(new Stu("er","南京",4,"32"));
         list.add(new Stu("san","南昌",5,"12"));
 
-        ListConvert<List<Stu>,Person.PersonBuilder,List<Person>> function = (t,k,r)-> t.stream().map(o->k.name(o.getName()).age(o.getAge()).addres(o.getAddres()).build()).collect(Collectors.toList());
-        List<Person> result = function.convert(list, new Person.PersonBuilder(), new ArrayList<>());
+        ListConvert<List<Stu>,Person.PersonBuilder,List<Person>> function = (t,k)-> t.stream().map(o->k.name(o.getName()).age(o.getAge()).addres(o.getAddres()).build()).collect(Collectors.toList());
+        List<Person> result = function.convert(list, new Person.PersonBuilder());
         System.out.println(result.get(0).getAddres());
     }
 

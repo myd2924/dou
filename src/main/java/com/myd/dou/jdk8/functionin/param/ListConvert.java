@@ -8,5 +8,5 @@ package com.myd.dou.jdk8.functionin.param;
  */
 @FunctionalInterface
 public interface ListConvert<T,K,R> {
-    R convert(T t,K k,R r);
+    R convert(T t,K k);
 }
