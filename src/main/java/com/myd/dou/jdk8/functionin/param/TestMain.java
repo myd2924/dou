@@ -18,18 +18,14 @@ public class TestMain {
         list.add(new Stu("er","南京",4,"32"));
         list.add(new Stu("san","南昌",5,"12"));
 
-        ListConvert<Stu,Person.PersonBuilder,Person> function = (t,k,r)->
-            r = k.addres(t.getAddres()).age(t.getAge()).name(t.getName()).build();
-
-        List<Person> result = convertDTO(list,(t,k,r)->
-                r = k.addres(t.getAddres()).age(t.getAge()).name(t.getName()).build());
+        ListConvert<List<Stu>,Person.PersonBuilder,List<Person>> function = (t,k,r)-> t.stream().map(o->k.name(o.getName()).age(o.getAge()).addres(o.getAddres()).build()).collect(Collectors.toList());
+        List<Person> result = function.convert(list, new Person.PersonBuilder(), new ArrayList<>());
         System.out.println(result.get(0).getAddres());
     }
 
-    private static List<Person> convertDTO(List<Stu> list, ListConvert<Stu, Person.PersonBuilder, Person> function) {
-        List<Person> collect = list.stream().map(o -> function.convert(o, new Person.PersonBuilder(), new Person())).collect(Collectors.toList());
-        return collect;
-    }
+
+
+
 
 
 }
