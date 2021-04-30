@@ -32,15 +32,18 @@ public class ListSumTest {
         list.add(num4);
 
         BigDecimal costSum = list.stream()
-                .filter(o->o!=null)
+                .filter(o->o.getCost()!=null)
                 .map(re -> re.getCost())
                 .reduce(BigDecimal.ZERO,BigDecimal::add);
         Optional<BigDecimal> reduce = list.stream()
+                .filter(o->o.getCost()!=null)
                 .map(re -> re.getCost())
                 .reduce(BigDecimal::add);
 
         System.out.println(costSum);
         System.out.println(reduce.get());
+
+
 
 
     }
