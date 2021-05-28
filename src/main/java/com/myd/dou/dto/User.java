@@ -41,4 +41,8 @@ public class User implements Serializable{
         return a;
     }
 
+    public void setName(){
+        this.name = name+"1";
+    }
+
 }
