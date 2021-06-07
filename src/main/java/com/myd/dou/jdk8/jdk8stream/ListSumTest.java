@@ -1,5 +1,7 @@
 package com.myd.dou.jdk8.jdk8stream;
 
+import org.omg.CosNaming.BindingHelper;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +62,11 @@ public class ListSumTest {
         System.out.println(foo.availablePermits());
         int []ar = {1,2,3};
         System.out.println(Arrays.stream(ar).sum());
+
+        List<BigDecimal> de = new ArrayList<>();
+        de.add(null);
+        de.add(null);
+        System.out.println(de);
 
 
     }
