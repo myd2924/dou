@@ -28,27 +28,32 @@ public class CompletableFutureTest {
     });
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        List<CompletableFuture<Void>> list = new ArrayList<>();
+        List<CompletableFuture<String>> list = new ArrayList<>();
 
         for (int i=0;i<3;i++){
-            CompletableFuture<Void> fu = CompletableFuture.runAsync(()->{
+            //CompletableFuture.runAsync() 返回空
+            CompletableFuture<String> fu = CompletableFuture.supplyAsync(()->{
                 try {
                     Thread.sleep(000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
-                CompletableFuture<Void> child = CompletableFuture.runAsync(()->{
+                CompletableFuture<String> child = CompletableFuture.supplyAsync(()->{
                     System.out.println("我被执行了啊");
+                    String a = "hh";
+                    return a;
                 },POOL);
                 child.join();
+                return "hebi";
+            }
 
-            },POOL);
+            ,POOL);
 
             System.out.println(String.format("第%s个父任务等待完成",i));
 
             list.add(fu);
         }
-        System.out.println(list.get(0).get());
+        System.out.println(list.get(0).get()+"  "+list.get(1).get());
     }
 }
