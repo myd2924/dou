@@ -12,7 +12,8 @@ import java.util.Optional;
  */
 public class OptionalTest {
     public static void main(String[] args) {
-        Optional<User> optionalUser = queryById();
+        User user = queryById();
+        System.out.println(Optional.ofNullable(user).orElse(new User("2","ff",4)));
     }
 
 
@@ -20,7 +21,7 @@ public class OptionalTest {
      * 模拟查库
      * @return
      */
-    private static Optional<User> queryById() {
+    private static User queryById() {
         return null;
     }
 }
