@@ -15,7 +15,7 @@ public class ProductTrade implements Runnable {
     private CountDownLatch latch;
     Disruptor<TradeEvent> disruptor;
 
-    private static final int LOOP = 10000;
+    private static final int LOOP = 20;
 
     public ProductTrade(CountDownLatch latch, Disruptor<TradeEvent> disruptor) {
         this.latch = latch;

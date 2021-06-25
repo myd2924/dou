@@ -35,11 +35,12 @@ public class DisruptorMain {
                 return new TradeEvent();
             }
         },bufferSize,executor, ProducerType.SINGLE, new BusySpinWaitStrategy());
-        //菱形操作
-        //使用disruptor创建消费者组C1,C2
-        EventHandlerGroup<TradeEvent> handlerGroup = disruptor.handleEventsWith(new Handler1(),new Handler2());
-        //声明在C1,C2完事之后执行JMS消息发送操作 也就是流程走到C3
-        handlerGroup.then(new Handler3());
+
+        //HandlerDSL.processDslOne(disruptor);
+        //HandlerDSL.processDslTwo(disruptor);
+        //HandlerDSL.processDslThree(disruptor);
+        HandlerDSL.processDslFour(disruptor);
+
         watch.stop();
 
         watch.start("execute");

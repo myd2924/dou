@@ -25,6 +25,8 @@ public class Handler1 implements EventHandler<TradeEvent>,WorkHandler<TradeEvent
         //获取当前线程id
         final long threadId = Thread.currentThread().getId();
 
+        Thread.sleep(20);
+
         System.out.println(String.format("%s: thread id %s 订单%s保存到数据库",this.getClass().getSimpleName(),threadId,id));
     }
 }
