@@ -14,6 +14,14 @@ public class OptionalTest {
     public static void main(String[] args) {
         User user = queryById();
         System.out.println(Optional.ofNullable(user).orElse(new User("2","ff",4)));
+        User user2 = new User();
+        final Optional<Integer> integer = Optional.ofNullable(user2)
+                .map(o -> o.getAge());
+        if(integer.isPresent()){
+            final Integer integer1 = integer.get();
+            System.out.println("****");
+        }
+
     }
 
 
