@@ -18,8 +18,8 @@ public class ExecutorServiceTest {
     private static final long WAIT_TIME = 8*1000;
     private static final long AWAIT_TIME = 5*1000;
 
-   //public final static ExecutorService POOL1 = Executors.newFixedThreadPool(5);
-    public final static ExecutorService POOL = new ThreadPoolExecutor(2, 5, 5L, TimeUnit.SECONDS, new ArrayBlockingQueue(1000), r -> new Thread(r,"my-pool-thread"), (r, executor) -> log.warn(r.toString()+" reject"));
+   /**public final static ExecutorService POOL1 = Executors.newFixedThreadPool(5);*/
+   public final static ExecutorService POOL = new ThreadPoolExecutor(2, 5, 5L, TimeUnit.SECONDS, new ArrayBlockingQueue(1000), r -> new Thread(r, "my-pool-thread"), (r, executor) -> log.warn(r.toString() + " reject"));
 
     public static void main(String[] args) {
         /* 这是一个耗时任务 */
