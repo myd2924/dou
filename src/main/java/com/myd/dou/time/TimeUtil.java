@@ -17,7 +17,10 @@ public class TimeUtil {
        // time2();
         //time3();
 
-        time4();
+        //time4();
+        //右移一位  扩大一倍  8<<1 ==16
+        final int availableProcessors = Runtime.getRuntime().availableProcessors()<<1;
+        System.out.println(availableProcessors);
     }
 
     /**
