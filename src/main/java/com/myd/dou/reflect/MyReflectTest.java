@@ -27,14 +27,18 @@ public class MyReflectTest {
         final Method[] declaredMethods = myReflectClass.getDeclaredMethods();
 
         final MyReflect newInstance = myReflectClass.newInstance();
-        final Class<?> aClass = Class.forName("com.myd.dou.reflect.MyReflect");
+        newInstance.setAge(30);
+
+        final String class_name = "com.myd.dou.reflect.MyReflect";//可配置
+        final Class<?> aClass = Class.forName(class_name);
         final MyReflect instance = (MyReflect)aClass.newInstance();
+        instance.setName("woca");
 
         MyReflect myReflect = new MyReflect("myd",5,"dancing");
         for (Method m : declaredMethods){
 
             if("puMethod".equals(m.getName())){
-                final Object daxi = m.invoke(myReflect, "daxi");
+                final Object daxi = m.invoke(newInstance, "daxi");
                 System.out.println(daxi);
                 continue;
             }
@@ -49,6 +53,12 @@ public class MyReflectTest {
                 m.setAccessible(true);
                 final Object daxi = m.invoke(myReflect, "sing");
                 System.out.println(daxi);
+                continue;
+            }
+
+            if("staticMethod".equals(m.getName())){//静态方法可省略对象，直接用null替代，或用clas
+                final Object 我是静态 = m.invoke(null, "我是静态");
+                System.out.println(我是静态);
             }
 
         }

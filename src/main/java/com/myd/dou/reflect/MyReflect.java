@@ -1,9 +1,6 @@
 package com.myd.dou.reflect;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author <a href="mailto:mayuanding@qianmi.com">OF3787-马元丁</a>
@@ -15,6 +12,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class MyReflect {
 
     private String name;
@@ -33,6 +31,10 @@ public class MyReflect {
 
     private String priMethod(String boby){
         return boby + ": private  就这么点爱好--" + this.getHobby();
+    }
+
+    public static String staticMethod(String staticData){
+        return "静态方法"+staticData;
     }
 
 }
