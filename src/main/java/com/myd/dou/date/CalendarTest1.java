@@ -16,5 +16,8 @@ public class CalendarTest1{
         System.out.println(calendar.getTime());
         String string = "2021-06-24 14:38:49";
 
+        String date = "2021-06-24T14:38:49.0+08";
+        final Date date1 = DateUtils.dealDateFormat(date);
+        System.out.println(date1);
     }
 }

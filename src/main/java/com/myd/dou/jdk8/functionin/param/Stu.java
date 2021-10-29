@@ -1,9 +1,6 @@
 package com.myd.dou.jdk8.functionin.param;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author <a href="mailto:mayuanding@qianmi.com">OF3787-马元丁</a>
@@ -15,6 +12,7 @@ import lombok.Setter;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Stu {
     private String name;
 
