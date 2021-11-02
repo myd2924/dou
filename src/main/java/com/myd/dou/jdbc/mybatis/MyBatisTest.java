@@ -32,14 +32,6 @@ public class MyBatisTest {
             //4获取mapper
             final TestUserMapper mapper = sqlSession.getMapper(TestUserMapper.class);
             //5执行接口方法
-            /*mapper.insert(TestUser.builder()
-                    .nickname("大曦")
-                    .realName("大豆")
-                    .dateCreate(new Date())
-                    .dateUpdate(new Date())
-                    .deleted(0L)
-                    .memberId(15L)
-                    .build());*/
             final TestUser testUser = mapper.selectByPrimaryKey(42013L);
             log.info("testUser="+ JSON.toJSONString(testUser));
             //6提交事务

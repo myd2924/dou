@@ -35,7 +35,6 @@
     </environments>
 
    <mappers>
-
         <!--<package name="com.myd.dou.jdbc.mybatis.dao"/>-->
         <mapper resource="./mapper/TTestUserMapper.xml"/>
     </mappers>
