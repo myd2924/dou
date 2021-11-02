@@ -120,6 +120,11 @@
       <artifactId>disruptor</artifactId>
       <version>3.3.6</version>
     </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.22</version>
+    </dependency>
 
   </dependencies>
 
