@@ -11,7 +11,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 
 /**
  * @author <a href="mailto:mayuanding@qianmi.com">OF3787-马元丁</a>
