@@ -2,7 +2,7 @@ package com.myd.dou.mutithread;
 
 /**
  * @ClassName Admin
- * @Description TODO
+ * @Description
  * @Author 18050909
  * @Date 2020/5/26 9:16
  * @Version 1.0
