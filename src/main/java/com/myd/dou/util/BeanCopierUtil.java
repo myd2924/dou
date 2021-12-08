@@ -2,7 +2,6 @@ package com.myd.dou.util;
 
 import com.myd.dou.dto.Student;
 import com.myd.dou.dto.User;
-import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.junit.Test;

@@ -22,6 +22,9 @@ public class OptionalTest {
             System.out.println("****");
         }
 
+        final Object o = Optional.ofNullable(null).orElse(new Object());
+        System.out.println(o);
+
     }
 
 
