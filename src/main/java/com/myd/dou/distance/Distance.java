@@ -42,7 +42,9 @@ public class Distance {
 
     public static void main(String[] args) {
         //根据两点间的经纬度计算距离，单位：m
-        System.out.println(getDistance(114.21221, 22.68301, 114.21229, 22.68309)*1000);
+
+        System.out.println("千米数谋商城雨花店="+getDistance(118.766777,31.975199, 118.76444, 31.978904)*1000);
+        System.out.println("门店名称测试001="+getDistance(118.766777,31.975199, 118.766674, 31.975212)*1000);
     }
 
 }
