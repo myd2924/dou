@@ -80,6 +80,9 @@ public class BeanCopierUtil {
             user.setAge(student.getAge()+100);
         });
         log.info("userList:{}",userVOList);
+
+
+
     }
 
 

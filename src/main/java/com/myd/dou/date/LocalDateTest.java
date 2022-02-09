@@ -1,5 +1,7 @@
 package com.myd.dou.date;
 
+import com.myd.dou.dto.DataDTO;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -17,5 +19,12 @@ public class LocalDateTest {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(localDateTime);
         System.out.println(localDateTime.toLocalDate());
+
+        System.out.println(LocalDateTime.now().plusDays(-1).withHour(0).withMinute(0).withSecond(0));
+
+        DataDTO dataDTO = new DataDTO();
+        dataDTO.setDateTime(LocalDateTime.now().plusDays(-1).withHour(0).withMinute(0).withSecond(0));
+        System.out.println(dataDTO.getDateTime());
+
     }
 }
