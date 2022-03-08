@@ -28,9 +28,6 @@ public class BingJiaoCha {
 
         set2.add("a");
         set2.add("b");
-        set2.add("c");
-        set2.add("d");
-        set2.add("e");
 
 
         final boolean b = set1.removeAll(set2);
