@@ -1,4 +1,4 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.threadlocal;
 
 import com.myd.dou.dto.User;
 

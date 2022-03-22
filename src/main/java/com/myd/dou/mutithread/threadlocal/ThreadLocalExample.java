@@ -1,4 +1,4 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.threadlocal;
 
 /**
  * @author <a href="mailto:mayuanding@qianmi.com">OF3787-马元丁</a>

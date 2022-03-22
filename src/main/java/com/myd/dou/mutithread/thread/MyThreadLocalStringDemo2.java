@@ -1,4 +1,4 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.thread;
 
 import java.util.concurrent.CountDownLatch;
 

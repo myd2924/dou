@@ -1,10 +1,10 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.thread;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
  * @ClassName MyThreadLocalStringDemo
- * @Description TODO
+ * @Description
  * @Author 18050909
  * @Date 2020/6/5 11:14
  * @Version 1.0
