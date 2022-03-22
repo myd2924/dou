@@ -1,4 +1,4 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.cyclebarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -20,6 +20,7 @@ public class CircleBarrierTest {
                 public void run() {
                     System.out.println(Thread.currentThread().getName()+"玩家准备");
                     try {
+                        Thread.sleep(5000);
                         BARRIER.await();
                         System.out.println(Thread.currentThread().getName()+"玩家入场");
                     } catch (InterruptedException e) {
@@ -30,5 +31,7 @@ public class CircleBarrierTest {
                 }
             }).start();
         }
+
+        System.out.println("wohahahah,我不会等的");
     }
 }

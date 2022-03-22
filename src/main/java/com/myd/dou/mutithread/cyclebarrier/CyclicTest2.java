@@ -1,4 +1,7 @@
-package com.myd.dou.mutithread;
+package com.myd.dou.mutithread.cyclebarrier;
+
+import com.myd.dou.mutithread.Admin;
+import com.myd.dou.mutithread.Player;
 
 import java.util.concurrent.CyclicBarrier;
 
