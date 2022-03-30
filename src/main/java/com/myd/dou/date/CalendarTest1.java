@@ -1,7 +1,11 @@
 package com.myd.dou.date;
 
+import com.myd.dou.util.DateUtils;
+
+import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Optional;
 
 /**
  * @author <a href="mailto:mayuanding@qianmi.com">OF3787-马元丁</a>
@@ -11,13 +15,16 @@ import java.util.Date;
  */
 public class CalendarTest1{
     public static void main(String[] args) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date());
-        System.out.println(calendar.getTime());
-        String string = "2021-06-24 14:38:49";
+        Date date = new Date();
+        System.out.println(date);
+        LocalDateTime time = DateUtils.asLocalDateTime(date);
+        System.out.println(time);
 
-        String date = "2021-06-24T14:38:49.0+08";
-        final Date date1 = DateUtils.dealDateFormat(date);
+        final LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+        final Date date1 = DateUtils.asDate(now);
         System.out.println(date1);
+
+        final Optional<Date> empty = Optional.empty();
     }
 }
